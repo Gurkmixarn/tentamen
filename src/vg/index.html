@@ -9,7 +9,21 @@
 <body>
 
     <!-- HTML för att implementera krav F -->
-
+    <form name="myForm" onsubmit="return validateMyForm();">
+    <label for="numberId">Number Id</label>
+    <input type="number" id="numberId">
+    <label for="name">Product Name</label>
+    <input type="text" id="name">
+    <label for="price">Price</label>
+    <input type="number" id="price">
+    <input type="radio" name="status" id="outChoice" value="OutOfStatus">
+    <label for="outChoice">OUT_OF_STOCK!</label>
+    <input type="radio" name="status" id="inChoice" value="itsIn">
+    <label for="outChoice">IN_STOCK!</label>
+    <input type="radio" name="status" id="pendingChoice" value="pending">
+    <label for="pendingChoice">DELIVERY_PENDING!</label>
+        <button id="SUMBIT!">SUBMIT!</button>
+    </form>
     <!-- Scripts -->
     <script src="https://unpkg.com/jquery@3.3.1/dist/jquery.js"></script>
     <script src="validator.js"></script>

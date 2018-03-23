@@ -76,7 +76,12 @@ buttonForCart.click(() =>
                 data: JSON.stringify({ Order: thingsThatGoToJson }),
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
-                success: function(data){alert("We got your money now AHAHAHAHAHA!");},
+                success: function(data){alert("We got your money now AHAHAHAHAHA!");
+                products.forEach(emptyCart);
+                    targetShoppingCart.empty();
+
+
+                },
                 failure: function(errMsg) {
                     alert("Try again, i want your money!");
                 }
@@ -110,4 +115,8 @@ if(product.AmountInCart > 0)
     totalCost = totalCost + cost;
     thingsThatGoToJson.push("Product id:" + product.Id + " Amount:" + product.AmountInCart);
 }
+};
+let emptyCart = function (product)
+{
+    product.AmountInCart = 0;
 };

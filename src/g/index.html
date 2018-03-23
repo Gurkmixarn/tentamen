@@ -5,11 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Godkänd</title>
+    <style>
+        body,html
+        {
+            width:100%;
+            margin: 0 auto;
+        }
+        #hereBeProducts article
+        {
+            width:20%;
+            display: inline-block;
+        }
+        #herebeproducts img
+        {
+            /*width:100%;*/
+            height:50%;
+        }
+        #hereBeShoppingCart article
+        {
+            width:90%;
+            height:10%;
+        }
+        #hereBeShoppingCart article img
+        {
+            height:100px;
+        }
+        #hereBeShoppingCart *
+        {
+            display: inline-block;
+            margin-right:20px;
+        }
+
+    </style>
 </head>
 <body>
-
     <!-- HTML för att implementera kraven A-E -->
-
+    <button id="spawnCart">Update cart!</button>
+    <div id="hereBeShoppingCart"></div>
+    <main id="hereBeProducts"></main>
     <!-- Scripts -->
     <script src="https://unpkg.com/jquery@3.3.1/dist/jquery.js"></script>
     <script src="app.js"></script>
